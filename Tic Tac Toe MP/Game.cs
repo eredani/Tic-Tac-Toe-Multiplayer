@@ -132,6 +132,20 @@ namespace Tic_Tac_Toe_MP
                 New_Game.Visible = true;
                 status_game.Text = "You lose!";
             });
+            socket.On("Left", () =>
+            {
+                BlockChoice(true);
+                New_Game.Visible = true;
+                foreach (Control action in panel1.Controls)
+                {
+                    if (action is Button)
+                    {
+                        action.Text = "";
+                        action.BackColor = Color.White;
+                    }
+                }
+                status_game.Text = "Your opponent was disconnected!";
+            });
         }
         public void Disconect()
         {
