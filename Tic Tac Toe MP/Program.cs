@@ -17,17 +17,17 @@ namespace Tic_Tac_Toe_MP
         [STAThread]
         static void Main()
         {
-            //if (!mutex.WaitOne(TimeSpan.Zero, true))
-                //{
-                //    MessageBox.Show("You cannot open two games on the same PC.");
-                //    //Environment.Exit(0);
-                //}
-                //else
-                //{
+            if (!mutex.WaitOne(TimeSpan.Zero, true))
+            {
+                MessageBox.Show("You cannot open two games on the same PC.");
+                //Environment.Exit(0);
+            }
+            else
+            {
                 Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
-            //}
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Login());
+            }
         }
     }
 }

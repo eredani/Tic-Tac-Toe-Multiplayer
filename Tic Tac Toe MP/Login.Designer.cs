@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.iTalk_ThemeContainer1 = new iTalk.iTalk_ThemeContainer();
-            this.iTalk_Label1 = new iTalk.iTalk_Label();
-            this.txt_Username = new iTalk.iTalk_TextBox_Big();
             this.iTalk_Button_11 = new iTalk.iTalk_Button_1();
+            this.txt_Username = new iTalk.iTalk_TextBox_Big();
+            this.iTalk_Label1 = new iTalk.iTalk_Label();
+            this.iTalk_ControlBox1 = new iTalk.iTalk_ControlBox();
             this.iTalk_ThemeContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // iTalk_ThemeContainer1
             // 
             this.iTalk_ThemeContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.iTalk_ThemeContainer1.Controls.Add(this.iTalk_ControlBox1);
             this.iTalk_ThemeContainer1.Controls.Add(this.iTalk_Button_11);
             this.iTalk_ThemeContainer1.Controls.Add(this.txt_Username);
             this.iTalk_ThemeContainer1.Controls.Add(this.iTalk_Label1);
@@ -54,17 +57,19 @@
             this.iTalk_ThemeContainer1.TabIndex = 0;
             this.iTalk_ThemeContainer1.Text = "Login";
             // 
-            // iTalk_Label1
+            // iTalk_Button_11
             // 
-            this.iTalk_Label1.AutoSize = true;
-            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 32F);
-            this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label1.Location = new System.Drawing.Point(9, 38);
-            this.iTalk_Label1.Name = "iTalk_Label1";
-            this.iTalk_Label1.Size = new System.Drawing.Size(215, 59);
-            this.iTalk_Label1.TabIndex = 0;
-            this.iTalk_Label1.Text = "Username";
+            this.iTalk_Button_11.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_11.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.iTalk_Button_11.Image = null;
+            this.iTalk_Button_11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_11.Location = new System.Drawing.Point(19, 149);
+            this.iTalk_Button_11.Name = "iTalk_Button_11";
+            this.iTalk_Button_11.Size = new System.Drawing.Size(199, 40);
+            this.iTalk_Button_11.TabIndex = 2;
+            this.iTalk_Button_11.Text = "Login";
+            this.iTalk_Button_11.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.iTalk_Button_11.Click += new System.EventHandler(this.btn_SetName_Click);
             // 
             // txt_Username
             // 
@@ -82,19 +87,27 @@
             this.txt_Username.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Username.UseSystemPasswordChar = false;
             // 
-            // iTalk_Button_11
+            // iTalk_Label1
             // 
-            this.iTalk_Button_11.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.iTalk_Button_11.Image = null;
-            this.iTalk_Button_11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_11.Location = new System.Drawing.Point(19, 149);
-            this.iTalk_Button_11.Name = "iTalk_Button_11";
-            this.iTalk_Button_11.Size = new System.Drawing.Size(199, 40);
-            this.iTalk_Button_11.TabIndex = 2;
-            this.iTalk_Button_11.Text = "Login";
-            this.iTalk_Button_11.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.iTalk_Button_11.Click += new System.EventHandler(this.btn_SetName_Click);
+            this.iTalk_Label1.AutoSize = true;
+            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 32F);
+            this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label1.Location = new System.Drawing.Point(9, 38);
+            this.iTalk_Label1.Name = "iTalk_Label1";
+            this.iTalk_Label1.Size = new System.Drawing.Size(215, 59);
+            this.iTalk_Label1.TabIndex = 0;
+            this.iTalk_Label1.Text = "Username";
+            // 
+            // iTalk_ControlBox1
+            // 
+            this.iTalk_ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iTalk_ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_ControlBox1.Location = new System.Drawing.Point(141, 31);
+            this.iTalk_ControlBox1.Name = "iTalk_ControlBox1";
+            this.iTalk_ControlBox1.Size = new System.Drawing.Size(77, 19);
+            this.iTalk_ControlBox1.TabIndex = 3;
+            this.iTalk_ControlBox1.Text = "iTalk_ControlBox1";
             // 
             // Login
             // 
@@ -103,6 +116,7 @@
             this.ClientSize = new System.Drawing.Size(230, 220);
             this.Controls.Add(this.iTalk_ThemeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(126, 39);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -121,5 +135,6 @@
         private iTalk.iTalk_Label iTalk_Label1;
         private iTalk.iTalk_Button_1 iTalk_Button_11;
         private iTalk.iTalk_TextBox_Big txt_Username;
+        private iTalk.iTalk_ControlBox iTalk_ControlBox1;
     }
 }

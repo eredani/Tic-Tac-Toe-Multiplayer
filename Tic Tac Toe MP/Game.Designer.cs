@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.Ping = new System.Windows.Forms.Timer(this.components);
             this.iTalk_ThemeContainer1 = new iTalk.iTalk_ThemeContainer();
             this.New_Game = new iTalk.iTalk_Button_1();
@@ -49,6 +50,7 @@
             this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.iTalk_ControlBox1 = new iTalk.iTalk_ControlBox();
             this.iTalk_ThemeContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.GroupBox_Main.SuspendLayout();
@@ -64,6 +66,7 @@
             // iTalk_ThemeContainer1
             // 
             this.iTalk_ThemeContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.iTalk_ThemeContainer1.Controls.Add(this.iTalk_ControlBox1);
             this.iTalk_ThemeContainer1.Controls.Add(this.New_Game);
             this.iTalk_ThemeContainer1.Controls.Add(this.status_game);
             this.iTalk_ThemeContainer1.Controls.Add(this.panel1);
@@ -336,6 +339,16 @@
             this.Action.UseColumnTextForButtonValue = true;
             this.Action.Width = 41;
             // 
+            // iTalk_ControlBox1
+            // 
+            this.iTalk_ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iTalk_ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_ControlBox1.Location = new System.Drawing.Point(867, 0);
+            this.iTalk_ControlBox1.Name = "iTalk_ControlBox1";
+            this.iTalk_ControlBox1.Size = new System.Drawing.Size(77, 19);
+            this.iTalk_ControlBox1.TabIndex = 14;
+            this.iTalk_ControlBox1.Text = "iTalk_ControlBox1";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,6 +356,7 @@
             this.ClientSize = new System.Drawing.Size(956, 571);
             this.Controls.Add(this.iTalk_ThemeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(126, 39);
             this.Name = "Game";
             this.Text = "Multiplayer Game";
@@ -379,6 +393,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewButtonColumn Action;
+        private iTalk.iTalk_ControlBox iTalk_ControlBox1;
     }
 }
 
